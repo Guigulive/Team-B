@@ -106,7 +106,7 @@ address x = 0xdCad3a6d3569DF655070DEd06cb7A1b2Ccd1D3AF
 - `msg.sig` (`bytes4`):  整个 `msg.data` 的前 4 个 `byte`
 - `msg.value` (`uint`):  函数调用方携带的 `gas`，以 `wei` 为单位计价。
 
-**关键词**：
+## 关键词
 - `constant` 用于变量: 表明当前变量不可修改。如果修改，编辑器会报错。
 - `constant` 用于函数: 表明当前函数中，不应该修改状态。但要十分小心，因为即便修改了，编译器也不会报错。
 - `view` : 和 constant 用于函数时功能一样。
