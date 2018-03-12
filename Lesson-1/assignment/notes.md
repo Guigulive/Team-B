@@ -63,7 +63,7 @@ address x = 0xdCad3a6d3569DF655070DEd06cb7A1b2Ccd1D3AF
 ```
 
 成员：
-- `address.banlance` (`uint256`)：地址余额，单位 Wei。合约的 balance 不能直接接改，而是自动计算的。
+- `address.banlance` (`uint256`)：地址余额，单位 Wei。banlance 的值是 `readonly` 的，调用 `payable` 函数入账，调用 `address.transfer()` 等出账，以太坊自动计算新的余额。
 - `address.transfer(uint256 value)` ：给 address 转账 value(Wei)，且调用异常会抛出。
 - `address.send(value)`：和 transfer 类似，但调用后的异常将不会被返回，只会返回一个 false。
 - `address.call`, `address.callcode`, `address.delegatecall`：智能合约相互调用时使用
@@ -112,8 +112,7 @@ address x = 0xdCad3a6d3569DF655070DEd06cb7A1b2Ccd1D3AF
 - `view` : 和 constant 用于函数时功能一样。
 - `payable`: 表明调用函数可以接受以太币。
 - `this`: 指向的是当前合同的 `address`。
-- `revert`: 函数执行失败，需要通过调用 `revert()` 抛异常告诉函数调用方。调用后恢复合同状态，并将剩余 gas 返还。`throw` 已被废弃。
-
+- `revert()`: 函数执行失败，需要通过调用 `revert()` 抛异常告诉函数调用方。调用后恢复合同状态，并将剩余 gas 返还。等同于 `throw`。
 
 
 ## 省币秘诀
@@ -167,6 +166,7 @@ contract SimpleStorage {
 }
 ```
 
+代码见[/payroll.sol](https://github.com/Guigulive/Team-B/blob/master/Lesson-1/orgin/payroll.sol)
 
 
 参考资料：
