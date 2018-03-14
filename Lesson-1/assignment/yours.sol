@@ -5,16 +5,23 @@ contract Payroll {
     uint salaryUnit = 1 ether;
     uint salary = 1;
     address employee;
+    address owner;
     uint constant payDuration = 10 seconds;
     uint lastPayday = now;
     
+    function Payroll(){
+        owner = msg.sender;
+    }
+    
     //Update address
     function updateEmployee(address e) {
+        require(msg.sender == owner);
         employee = e;
     }
     
     //Update salary
     function updateSalary(uint s){
+        require(msg.sender == owner);
         salary = s * salaryUnit;
     }
     
