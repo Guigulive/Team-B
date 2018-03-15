@@ -83,10 +83,4 @@ contract Payroll {
         assert(employee.id != 0);
         _partialPaid(employee);
     }
-    function check() returns (uint) {
-        return employees.length;
-    }
-    function checkSalary() returns(uint) {
-        return employees[0].salary;
-    }
 }
