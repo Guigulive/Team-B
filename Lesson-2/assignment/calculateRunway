@@ -8,11 +8,13 @@ pragma solidity ^0.4.14;
     }
      address owner;
      uint constant payDuration=10 seconds;
+     uint totalSalary ;
     
      Employee[] employees;
      
      function Payroll() public{
          owner = msg.sender;
+         totalSalary = 0 ;
      }
      
      function _findEmployee(address employeeId) private returns (Employee,uint){
@@ -25,7 +27,7 @@ pragma solidity ^0.4.14;
          }
      }
      
-     function _partialPaid(Employee employee) private returns (uint lastPayday){
+     function _partialPaid(Employee employee) private returns (uint){
          uint payMent=employee.salary*(now - employee.lastPayday)/payDuration;
          employee.id.transfer(payMent);
          return (employee.lastPayday+(now - employee.lastPayday)/payDuration*payDuration);
@@ -39,8 +41,8 @@ pragma solidity ^0.4.14;
         require(msg.sender == owner);
         var (employee,index)=_findEmployee(employeeId);
         assert(employee.id == 0x0);
-        
-        employees.push(Employee(employeeId,salary,now));
+        totalSalary+=salary* 1 ether;
+        employees.push(Employee(employeeId,salary* 1 ether,now));
     }
     
     function removeEmployee(address employeeId) public{
@@ -54,13 +56,13 @@ pragma solidity ^0.4.14;
         
     }
     
-     function updateEmployy(address employeeId ,uint salary){
-         require(msg.sender == owner);
-         var (employee,index) = _findEmployee(employeeId);
+     function updateEmployee(address employeeOldId ,address employeeNewId,uint salary){
+         require(msg.sender == owner);  
+         var (employee,index) = _findEmployee(employeeOldId);
          assert(employee.id != 0x0);
        uint lastPayday = _partialPaid(employee);
-     
-        employees[index].id=employeeId;
+           totalSalary=  totalSalary -employee.salary+salary * 1 ether;
+        employees[index].id=employeeNewId;
         employees[index].salary=salary * 1 ether;
         employees[index].lastPayday=lastPayday;
     }
@@ -76,10 +78,6 @@ pragma solidity ^0.4.14;
      }
      
      function calculateRunway() returns (uint){
-         uint totalSalary= 0;
-         for(uint i=0; i < employees.length; i++){
-             totalSalary+=employees[i].salary;
-         }
          return this.balance / totalSalary;
      }
      
