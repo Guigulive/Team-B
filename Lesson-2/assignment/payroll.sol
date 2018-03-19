@@ -6,13 +6,13 @@ contract Payroll {
         uint salary;
         uint lastPayday;
     }
-    
+    uint totalSalary;
     uint constant payDuration = 10 seconds;
 
-    address owner;
-    Employee[] employees;
+    address  owner;
+    Employee[] public employees;
 
-    function Payroll() {
+    function Payroll() payable {
         owner = msg.sender;
     }
     
@@ -33,10 +33,9 @@ contract Payroll {
     function addEmployee(address employeeId, uint salary) {
         require(msg.sender == owner);
         var (e, index)= _findEmployee(employeeId);
-        if(e.id == 0) {
-            employees.push(Employee(employeeId, salary * 1 ether, now));
-            return;
-        }
+        assert(e.id == 0);
+        employees.push(Employee(employeeId, salary * 1 ether, now));
+        totalSalary += salary * 1 ether;
     }
     
     function removeEmployee(address employeeId) {
@@ -47,6 +46,7 @@ contract Payroll {
         delete employees[i];
         employees[i] = employees[employees.length - 1];
         employees.length -= 1;
+        totalSalary -= e.salary;
     }
     
     function updateEmployee(address employeeId, uint salary) {
@@ -54,7 +54,9 @@ contract Payroll {
         var (e, index) = _findEmployee(employeeId);
         assert(e.id != 0);
         _partialPaid(e);
+        totalSalary -= e.salary;
         employees[index].salary = salary * 1 ether;
+        totalSalary += employees[index].salary;
     }
     
     function addFund() payable returns (uint) {
@@ -63,15 +65,8 @@ contract Payroll {
     }
     
     function calculateRunway() returns (uint) {
-    
-       uint totalSalary = 0;
-       // cache employees.length, each iteration save around 200  gases 
-       uint len = employees.length;
-       for (uint i = 0; i < len; i++) {
-            totalSalary += employees[i].salary;
-        }
-        if(totalSalary != 0)
-        return this.balance / totalSalary;
+        if(totalSalary > 0)    
+            return this.balance / totalSalary;
     }
     
     function hasEnoughFund() returns (bool) {
@@ -83,4 +78,17 @@ contract Payroll {
         assert(employee.id != 0);
         _partialPaid(employee);
     }
+    function check() returns (uint) {
+        return employees.length;
+    }
+    function checkSalary() returns(uint) {
+        return employees[0].salary;
+    }
+    function getOwner() returns (address){
+        return owner;
+    }
+}
+
+contract MyPayRoll is Payroll {
+    address  public owner;
 }
