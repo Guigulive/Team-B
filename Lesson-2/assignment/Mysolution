@@ -1,0 +1,93 @@
+pragma solidity ^0.4.14;
+
+contract Payroll {
+    struct Employee {
+        address id;
+        uint salary;
+        uint lastPayday;
+    }
+    
+    uint constant payDuration = 10 seconds;
+    uint totalSalary = 0;
+    
+    address owner;
+    Employee[] employees;
+
+    function Payroll() {
+        owner = msg.sender;
+    }
+    
+    function _partialPaid(Employee employee) private {
+        uint payment = employee.salary*(now-employee.lastPayday)/payDuration;
+            employee.id.transfer(payment);
+    }
+    
+    function _findEmployee(address employeeId) private returns (Employee, uint) {
+        for(uint i=0; i<employees.length; i++) {
+            if(employees[i].id == employeeId) {
+                return (employees[i],i);
+            }
+        }
+    }
+
+    function addEmployee(address employeeId, uint salary) {
+        require(msg.sender == owner);
+        var (employee, index) = _findEmployee(employeeId);
+        assert(employee.id == 0x0);
+    
+        employees.push(Employee(employeeId, salary* 1 ether, now));
+        totalSalary += salary;
+    }
+    
+    function removeEmployee(address employeeId) {
+        require(msg.sender == owner);
+        var (employee, index) = _findEmployee(employeeId);
+        assert(employee.id == 0x0);
+        
+        _partialPaid(employee);
+        delete employees[index];
+        employees[index] = employees [employees.length-1];
+        
+    }
+    
+    function updateEmployee(address employeeId, uint salary) {
+        require(msg.sender == owner);
+        var(employee,index) = _findEmployee(employeeId);
+        assert(employee.id != 0x0);
+        
+        _partialPaid(employee);
+        employee.id = employeeId;
+        employee.salary = salary * 1 ether;
+        employee.lastPayday = now;
+        
+    }
+    
+    function addFund() payable returns (uint) {
+        return this.balance;
+    }
+    
+    function calculateRunway() returns (uint) {
+        return this.balance / totalSalary;
+    }
+    
+    function hasEnoughFund() returns (bool) {
+        return calculateRunway() > 0;
+    }
+    
+    function getPaid() {
+        var(employee,index) = _findEmployee(msg.sender);
+        assert(employee.id != 0x0);
+        
+        assert(nextPayDay < now);
+        uint nextPayDay = employee.lastPayday + payDuration;
+        employee.id.transfer(employee.salary);
+    }
+}
+
+//CalculateRunway()在每次增加多一个员工时都会增加GAS的消耗。Solidity重复计算了这个function。For循环一个更长的数组也需要消耗更多。
+//Gas记录：每次多一个员工
+//22971 gas,23759 gas,24547 gas,25335 gas,26123 gas,26871 gas,27652 gas,28433 gas,29275 gas,30063 gas
+//加入totalSalary,每次addEmployee,removeEmployee,updateEmployee的时候，同步更新totalSalary.
+//再次就算CalculateRunway()时只需要消耗一次，851 gas即可，而且不会增加。
+
+
