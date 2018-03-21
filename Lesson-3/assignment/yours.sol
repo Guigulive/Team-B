@@ -38,14 +38,16 @@ contract Payroll is Ownable{
         employee.id.transfer(payments);
     }
 
-    function addEmployee(address employeeId, uint salaryEther) onlyOwner employeeExist(employeeId, false) {
+    function addEmployee(address employeeId, uint salaryEther)
+            onlyOwner employeeExist(employeeId, false) {
         uint salary = salaryEther.mul(1 ether);
 
         employees[employeeId] = Employee(employeeId, salary, now);
         totalSalary = totalSalary.add(salary);
     }
 
-    function removeEmployee(address employeeId) onlyOwner  employeeExist(employeeId, true) {
+    function removeEmployee(address employeeId)
+            onlyOwner  employeeExist(employeeId, true) {
         Employee memory employee= employees[employeeId];
 
         delete employees[employeeId];
@@ -53,7 +55,8 @@ contract Payroll is Ownable{
         _partialPaid(employee);
     }
 
-    function updateEmployee(address employeeId, uint salaryEther) onlyOwner employeeExist(employeeId, true) {
+    function updateEmployee(address employeeId, uint salaryEther)
+            onlyOwner employeeExist(employeeId, true) {
         // ??? storage vs memory
         Employee memory employee= employees[employeeId];
 
@@ -87,9 +90,8 @@ contract Payroll is Ownable{
         employee.id.transfer(employee.salary);
     }
 
-
     function changePaymentAddress(address employeeId,address newEmployeeId)
-    onlyOwner employeeExist(employeeId, true) employeeExist(newEmployeeId, false) {
+            onlyOwner employeeExist(employeeId, true) employeeExist(newEmployeeId, false) {
 
         addEmployee( newEmployeeId, employees[employeeId].salary / 1 ether);
         removeEmployee( employeeId);
