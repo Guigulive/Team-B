@@ -19,14 +19,17 @@ contract Payroll is Ownable{
     uint totalSalary = 0;
     mapping(address => Employee) public employees;
 
-    // 需判断雇员是否已存在
-    modifier employeeExist(address employeeId, bool exist) {
+    // 需判断雇员已存在
+    modifier employeeExist(address employeeId) {
         Employee  employee = employees[employeeId];
-        if(exist){
-            require(employee.id != 0x0);
-        } else {
-            require(employee.id == 0x0);
-        }
+        require(employee.id != 0x0);
+        _;
+    }
+
+    // 需判断雇员不存在
+    modifier employeeNotExist(address employeeId) {
+        Employee  employee = employees[employeeId];
+        require(employee.id == 0x0);
         _;
     }
 
@@ -39,7 +42,7 @@ contract Payroll is Ownable{
     }
 
     function addEmployee(address employeeId, uint salaryEther)
-            onlyOwner employeeExist(employeeId, false) {
+            onlyOwner employeeNotExist(employeeId) {
         uint salary = salaryEther.mul(1 ether);
 
         employees[employeeId] = Employee(employeeId, salary, now);
@@ -47,7 +50,7 @@ contract Payroll is Ownable{
     }
 
     function removeEmployee(address employeeId)
-            onlyOwner  employeeExist(employeeId, true) {
+            onlyOwner  employeeExist(employeeId) {
         Employee memory employee= employees[employeeId];
 
         delete employees[employeeId];
@@ -56,7 +59,7 @@ contract Payroll is Ownable{
     }
 
     function updateEmployee(address employeeId, uint salaryEther)
-            onlyOwner employeeExist(employeeId, true) {
+            onlyOwner employeeExist(employeeId) {
         // ??? storage vs memory
         Employee memory employee= employees[employeeId];
 
@@ -80,7 +83,7 @@ contract Payroll is Ownable{
         return calculateRunway() > 0;
     }
 
-    function getPaid() employeeExist(msg.sender, true){
+    function getPaid() employeeExist(msg.sender){
         Employee storage employee = employees[msg.sender];
 
         uint nextPayday = employee.lastPayday.add(payDuration);
@@ -91,7 +94,7 @@ contract Payroll is Ownable{
     }
 
     function changePaymentAddress(address employeeId,address newEmployeeId)
-            onlyOwner employeeExist(employeeId, true) employeeExist(newEmployeeId, false) {
+            onlyOwner employeeExist(employeeId) employeeNotExist(newEmployeeId) {
 
         addEmployee( newEmployeeId, employees[employeeId].salary / 1 ether);
         removeEmployee( employeeId);
