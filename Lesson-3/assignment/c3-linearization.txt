@@ -1,0 +1,7 @@
+L(o) = [o]
+L(A) = [A,o]
+L(B) = [B,o]
+L(C) = [C,o]
+L(K1) = [K1,A,B,o]
+L(K2) = [k2,A,B,o]
+L(Z) = [K1,K2,A,B,C,o] 
