@@ -12,6 +12,7 @@
 - contract K1 is A, B
 - contract K2 is A, C
 - contract Z is K1, K2
+
 答:
 L[O] = O
 L[A] = A + merge[O] = [A, O]
