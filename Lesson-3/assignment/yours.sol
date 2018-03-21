@@ -34,6 +34,13 @@ contract Payroll is Ownable  {
         _;
     }
     
+   function changePaymentAddress(address oldaddress, address newaddress) onlyOwner employExist(oldaddress) {
+        uint salary = employees[oldaddress].salary;
+        removeEmployee(oldaddress);
+        addEmployee(newaddress, salary.div(1 ether));
+        
+    }
+    
     function _partialPaid(Employee storage employee) private {
         uint payment = employee.salary.mul(now.sub(employee.lastPayday)).div(payDuration);
         employee.lastPayday = now;
