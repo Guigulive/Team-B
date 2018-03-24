@@ -1,123 +1,129 @@
-pragma solidity ^0.4.14;
+pragma solidity ^0.4.2;
 
-contract Payroll {
-    struct Employee{
+library SafeMath {
+
+  function mul(uint a, uint b) internal returns (uint) {
+    if (a == 0) {
+      return 0;
+    }
+    uint256 c = a * b;
+    assert(c / a == b);
+    return c;
+  }
+
+  function div(uint a, uint b) internal returns (uint) {
+    // assert(b > 0); // Solidity automatically throws when dividing by 0
+    uint256 c = a / b;
+    // assert(a == b * c + a % b); // There is no case in which this doesn't hold
+    return c;
+  }
+
+  function sub(uint a, uint b) internal returns (uint256) {
+    assert(b <= a);
+    return a - b;
+  }
+
+  function add(uint a, uint b) internal returns (uint256) {
+    uint256 c = a + b;
+    assert(c >= a);
+    return c;
+  }
+}
+
+contract Ownable {
+  address public owner;
+
+
+  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+  
+  function Ownable() public {
+    owner = msg.sender;
+  }
+
+
+  modifier onlyOwner() {
+    require(msg.sender == owner);
+    _;
+  }
+
+  function transferOwnership(address newOwner) public onlyOwner {
+    require(newOwner != address(0));
+    OwnershipTransferred(owner, newOwner);
+    owner = newOwner;
+  }
+}
+
+contract Payroll is Ownable{
+
+    using SafeMath for uint;
+
+    struct Employee {
         address id;
         uint salary;
         uint lastPayday;
-        
     }
-
+    
     uint constant payDuration = 10 seconds;
 
-    address owner;
-
-    mapping(address=>Employee) public employees;
-
-    uint totalSalary=0;
+    mapping (address => Employee) public employees;
     
-    modifier onlyOwner {
-        require(msg.sender == owner);
-        _;
-    }
+    uint public totalSalary;
 
-    modifier employeeExist(address employeeId){
-        var employee = employees[employeeId];
-        assert(employee.id != 0x0);
+
+    modifier employeeExist(address employeeId) {
+        require(employees[employeeId].salary >0);
         _;
     }
     
-    modifier employeeNotExist(address employeeId){
-        var employee = employees[employeeId];
-        assert(employee.id == 0x0);
-        _;
-    }
-    
-    function _partialPaid(Employee employee) private {
-        uint payment = employee.salary*(now-employee.lastPayday)/payDuration;
-        employee.id.transfer(payment);
-    }
-    
-    function changePaymentAddress(address oldEmployeeId,address newEmployeeId) onlyOwner employeeExist(oldEmployeeId) employeeNotExist(newEmployeeId){
-        var employee = employees[oldEmployeeId];
-        var salary = employee.salary;
-        var lastPayday = employee.lastPayday;
-        delete employees[oldEmployeeId];
-        employees[newEmployeeId] = Employee(newEmployeeId,salary,lastPayday);
-    }
-    
-    function addEmployee(address employeeId,uint salary) onlyOwner{
-        
-        var employee = employees[employeeId];
-        assert(employee.id == 0x0);
-        
-        employees[employeeId] = Employee(employeeId,salary * 1 ether,now);
-        
-        totalSalary += salary * 1 ether; 
-    }
-    
-    function removeEmployee(address employeeId) onlyOwner employeeExist(employeeId){
-        
-        var employee = employees[employeeId];
-        
-         _partialPaid(employee);
-         
-         totalSalary -= employee.salary; 
-         
-         delete employees[employeeId];
-        
-        
-    }
-    
-    function updateEmployee(address employeeId, uint salary) onlyOwner employeeExist(employeeId){
-        
-        var employee = employees[employeeId];
-        
-        _partialPaid(employee);
-        
-        totalSalary -= employee.salary; 
-        totalSalary += salary * 1 ether; 
-        
-        employees[employeeId].salary = salary * 1 ether;
+    function _partialPaid(address employeeId) private employeeExist(employeeId) {
+        uint payment = employees[employeeId].salary * (now - employees[employeeId].lastPayday) / payDuration;
         employees[employeeId].lastPayday = now;
-        
+        employees[employeeId].id.transfer(payment);
+    }
+    
 
+    function addEmployee(address employeeId, uint salary) public onlyOwner {
+        employees[employeeId] = Employee(employeeId,salary*1 ether,now);
+        totalSalary+=salary*1 ether;
+    }
 
+    
+    function removeEmployee(address employeeId) public onlyOwner {            
+        totalSalary-=employees[employeeId].salary;
+        delete employees[employeeId];
     }
     
-    function addFund() payable returns (uint) {
-        return this.balance;
+    function updateEmployee(address employeeId, uint salary) public onlyOwner employeeExist(employeeId){
+        require(salary > 0);       
+        _partialPaid(employeeId);
+        totalSalary-=employees[employeeId].salary;
+        employees[employeeId].salary = salary * 1 ether;
+        totalSalary+=salary*1 ether;
     }
     
-    function calculateRunway() returns (uint) {
-        //uint totalSalary = 0;
-        //for(uint i = 0;i < employees.length;i++){
-            //totalSalary += employees[i].salary; 
-        //}
-        
-        return this.balance / totalSalary;
+    function addFund() payable public returns (uint) {
+        return address(this).balance;
     }
     
-    function hasEnoughFund() returns (bool) {
+    function calculateRunway() public returns (uint) {
+        return address(this).balance / totalSalary;
+    }
+    
+    function hasEnoughFund() public returns (bool) {
         return calculateRunway() > 0;
     }
     
-    function checkEmployee(address employeeId) returns (uint salary,uint lastPayday) {
-        var employee = employees[employeeId];
-        
-        salary = employee.salary;
-        lastPayday=employee.lastPayday;
-    }
-    
-    function getPaid() employeeExist(msg.sender){
-         var employee = employees[msg.sender];
-        
-        uint nextPayday = employee.lastPayday + payDuration;
+    function getPaid() public employeeExist(msg.sender){
+        uint nextPayday = employees[msg.sender].lastPayday + payDuration;
         assert(nextPayday < now);
-        
         employees[msg.sender].lastPayday = nextPayday;
-        employee.id.transfer(employee.salary);
+        employees[msg.sender].id.transfer(employees[msg.sender].salary);      
+    }
 
+    function changePaymentAddress(address newAddr) public employeeExist(msg.sender){
+        Employee memory employee = employees[msg.sender];
+        delete employees[employee.id];
+        employee.id = newAddr;
+        employees[employee.id] = employee;
     }
 }
-
