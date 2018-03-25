@@ -10,7 +10,7 @@ contract Payroll is Ownable {
     uint constant payDuration = 10 seconds;
     
     address owner;
-    
+
     struct Employee {
         address id;
         uint salary;
@@ -22,7 +22,7 @@ contract Payroll is Ownable {
     uint totalSalary = 0;
 
     modifier employeeExist(address employeeId){
-        Employee employee = employees[employeeId];
+        Employee storage employee = employees[employeeId];
         assert(employee.id != 0x0);
         _;
     }
@@ -35,17 +35,17 @@ contract Payroll is Ownable {
     }
     
 
-    function addEmployee(address employeeId, uint salary) onlyOwner{
+    function addEmployee(address employeeId, uint salary) onlyOwner {
         
-        Employee employee = employees[employeeId];
+        Employee storage employee = employees[employeeId];
         assert(employee.id == 0x0);
-        employees[employeeId]=Employee(employeeId,salary.mul(1 ether),now);
+        employees[employeeId] = Employee(employeeId,salary.mul(1 ether),now);
         totalSalary = totalSalary.add(salary.mul(1 ether));
     }
     
     function removeEmployee(address employeeId) onlyOwner employeeExist(employeeId) {
        
-        Employee employee = employees[employeeId];
+        Employee storage employee = employees[employeeId];
        
         _partialPaid(employees[employeeId]);
         delete employees[employeeId];
@@ -61,7 +61,7 @@ contract Payroll is Ownable {
     
     function updateEmployee(address employeeId, uint salary) onlyOwner employeeExist(employeeId) {
         
-        Employee employee = employees[employeeId];
+        Employee storage employee = employees[employeeId];
        
         _partialPaid(employees[employeeId]);
         totalSalary = (totalSalary.add(salary.mul(1 ether))).sub(employee.salary);
@@ -83,7 +83,7 @@ contract Payroll is Ownable {
     }
     
     function getPaid() employeeExist(msg.sender) {
-        Employee employee = employees[msg.sender];
+        Employee storage employee = employees[msg.sender];
       
         //uint nextPayday = employee.lastPayday + payDuration;
         //assert(nextPayday < now);
