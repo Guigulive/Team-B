@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Table, Button, Modal, Form, InputNumber, Input, message, Popconfirm } from 'antd';
+import { Table, Button, Modal, Form, InputNumber, Input, message, Popconfirm, Alert } from 'antd';
 
 import EditableCell from './EditableCell';
 
@@ -47,7 +47,8 @@ class EmployeeList extends Component {
     );
   }
 
-  componentDidMount() {
+  checkInfo() {
+    console.log('chekcinfo')
     const { payroll, account, web3 } = this.props;
     payroll.checkInfo.call({
       from: account
@@ -61,19 +62,67 @@ class EmployeeList extends Component {
 
       this.loadEmployees(employeeCount);
     });
-
+  }
+  componentDidMount() {
+    let {payroll} = this.props;
+    this.checkInfo();
+    
+    this.newEmployeeEvent = payroll.NewEmployee(()=>this.checkInfo());
+    this.updateEmployeeEvent = payroll.UpdateEmployee(()=>this.checkInfo());
+    this.removeEmployeeEvent = payroll.RemoveEmployee(()=>this.checkInfo());
   }
 
-  loadEmployees(employeeCount) {
+  componentWillUnmount() {
+    this.newEmployeeEvent.stopWatching();
+    this.updateEmployeeEvent.stopWatching();
+    this.removeEmployeeEvent.stopWatching();
+  }
+  async loadEmployees(employeeCount) {
+    console.log('load emploee', employeeCount)
+    let {payroll, web3} = this.props;
+    let employees = [];
+    for(let i=0; i < employeeCount; i++) {
+      let result = await payroll.checkEmployee.call(i);
+      let [address, salary, lastPaidDay] = result;
+      salary = web3.fromWei(salary).toNumber();
+      lastPaidDay = lastPaidDay.toNumber();
+      employees.push({address, salary, lastPaidDay, key: i});
+    }
+    this.setState({employees, loading:false});
   }
 
   addEmployee = () => {
+    let {payroll, account} = this.props;
+    payroll.addEmployee(this.state.address, this.state.salary, {from :account, gas: 500000})
+    .then(()=> {
+      this.setState({showModal: false});
+    }, error => {
+      alert('add employee error: '+ error.message)
+    })
+    
   }
 
   updateEmployee = (address, salary) => {
+    let {payroll, account} = this.props;
+    
+    payroll.updateEmployee(address, salary, {from: account, gas: 500000})
+    .then(()=> {
+    }, error => {
+      alert('updateEmployee error: '+ error.message);
+    })
   }
 
   removeEmployee = (employeeId) => {
+    let {payroll, account} = this.props;
+    this.setState({loading:true})
+    payroll.removeEmployee(employeeId, {gas: 500000, from: account})
+      .then(()=> {
+        this.setState({loading:false})
+      }, error => {
+        alert('删除错误:' + error.message);
+        this.setState({loading:false})
+      })
+
   }
 
   renderModal() {

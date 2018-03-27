@@ -11,13 +11,19 @@ contract Payroll is Ownable {
         uint lastPayday;
     }
     
-    uint constant payDuration = 10 seconds;
+    uint constant payDuration = 100 seconds;
 
     uint totalSalary;
     uint totalEmployee;
-    address[] employeeList;
+    address[] public employeeList;
     mapping(address => Employee) public employees;
 
+    //events
+    event NewFund();
+    event GetPaid();
+    event NewEmployee();
+    event UpdateEmployee();
+    event RemoveEmployee();
 
     modifier employeeExit(address employeeId) {
         var employee = employees[employeeId];
@@ -47,6 +53,7 @@ contract Payroll is Ownable {
         totalSalary = totalSalary.add(employees[employeeId].salary);
         totalEmployee = totalEmployee.add(1);
         employeeList.push(employeeId);
+        NewEmployee();
     }
     
     function removeEmployee(address employeeId) onlyOwner employeeExit(employeeId) {
@@ -55,7 +62,14 @@ contract Payroll is Ownable {
         _partialPaid(employee);
         totalSalary = totalSalary.sub(employee.salary);
         delete employees[employeeId];
+        for(var i = 0; i < employeeList.length; i++) {
+          if(employeeList[i] == employeeId) {
+            employeeList[i] = employeeList[employeeList.length - 1];
+            break;
+          }
+        }
         totalEmployee = totalEmployee.sub(1);
+        RemoveEmployee();
     }
     
     function updateEmployee(address employeeId, uint salary) onlyOwner employeeExit(employeeId) {
@@ -66,9 +80,11 @@ contract Payroll is Ownable {
         employee.salary = salary.mul(1 ether);
         employee.lastPayday = now;
         totalSalary = totalSalary.add(employee.salary);
+        UpdateEmployee();
     }
     
     function addFund() payable returns (uint) {
+        NewFund();
         return this.balance;
     }
     
@@ -88,6 +104,7 @@ contract Payroll is Ownable {
 
         employee.lastPayday = nextPayday;
         employee.id.transfer(employee.salary);
+        GetPaid();
     }
 
     function checkInfo() returns (uint balance, uint runway, uint employeeCount) {
