@@ -224,7 +224,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 584,
+                        "referencedDeclaration": 598,
                         "src": "502:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -312,7 +312,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 584,
+                            "referencedDeclaration": 598,
                             "src": "633:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -366,7 +366,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 587,
+                      "referencedDeclaration": 601,
                       "src": "625:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -520,7 +520,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 587,
+                      "referencedDeclaration": 601,
                       "src": "888:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -909,7 +909,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 584,
+                        "referencedDeclaration": 598,
                         "src": "502:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -997,7 +997,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 584,
+                            "referencedDeclaration": 598,
                             "src": "633:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1051,7 +1051,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 587,
+                      "referencedDeclaration": 601,
                       "src": "625:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1205,7 +1205,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 587,
+                      "referencedDeclaration": 601,
                       "src": "888:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1449,10 +1449,10 @@
     "1522173639488": {
       "events": {},
       "links": {},
-      "address": "0xe8a7325307e432b53b3aa48bd2f84d5bbfbaf439",
-      "transactionHash": "0x72a3b1377c375f14222695f577c34b375e3f9f64261daac81452fa8427548328"
+      "address": "0x96691309ea864c501084b14bdbdbd813928db650",
+      "transactionHash": "0xdd95d8acfff536504f138152347c352c16b5a48959ccda81f3438c86e23b8567"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-27T18:21:26.069Z"
+  "updatedAt": "2018-03-28T12:58:13.476Z"
 }

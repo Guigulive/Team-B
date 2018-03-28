@@ -48,7 +48,6 @@ class EmployeeList extends Component {
   }
 
   checkInfo() {
-    console.log('chekcinfo')
     const { payroll, account, web3 } = this.props;
     payroll.checkInfo.call({
       from: account
@@ -56,7 +55,8 @@ class EmployeeList extends Component {
       const employeeCount = result[2].toNumber();
 
       if (employeeCount === 0) {
-        this.setState({loading: false});
+        // clear list if no employee
+        this.setState({loading: false, employees: []});
         return;
       }
 
@@ -78,7 +78,6 @@ class EmployeeList extends Component {
     this.removeEmployeeEvent.stopWatching();
   }
   async loadEmployees(employeeCount) {
-    console.log('load emploee', employeeCount)
     let {payroll, web3} = this.props;
     let employees = [];
     for(let i=0; i < employeeCount; i++) {

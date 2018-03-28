@@ -65,6 +65,8 @@ contract Payroll is Ownable {
         for(var i = 0; i < employeeList.length; i++) {
           if(employeeList[i] == employeeId) {
             employeeList[i] = employeeList[employeeList.length - 1];
+            delete employeeList[employeeList.length - 1];
+            employeeList.length -= 1;
             break;
           }
         }
