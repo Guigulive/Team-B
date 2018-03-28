@@ -1,0 +1,33 @@
+{
+  "contract_name": "SafeMath",
+  "abi": [],
+  "unlinked_binary": "0x60606040523415600e57600080fd5b5b603680601c6000396000f30060606040525b600080fd00a165627a7a72305820196903c6e9203982dc43dc723b7e7c038857c7b0add4bfa405b6b6b829a96d8b0029",
+  "networks": {
+    "1522140201628": {
+      "events": {},
+      "links": {},
+      "address": "0x3e80ee39a86786c6b60938374fb583f7c518834b",
+      "updated_at": 1522142851055
+    },
+    "1522145070852": {
+      "events": {},
+      "links": {},
+      "address": "0x18ed27e120044dd89fabd8b059b4480bb7e6ad1a",
+      "updated_at": 1522145087395
+    },
+    "1522204060488": {
+      "events": {},
+      "links": {},
+      "address": "0xacf5846e4d712205a7b3661bbba9f84561799847",
+      "updated_at": 1522221166624
+    },
+    "1522222331613": {
+      "events": {},
+      "links": {},
+      "address": "0xac556e48b8000c7b385d0350c12c71b554b70374",
+      "updated_at": 1522226538913
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1522226538913
+}
