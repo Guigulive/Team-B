@@ -37,7 +37,7 @@ class EmployeeList extends Component {
       <EditableCell
         value={text}
         onChange={ this.updateEmployee.bind(this, record.address) }
-      ,,/>
+      />
     );
 
     columns[3].render = (text, record) => (
@@ -50,7 +50,8 @@ class EmployeeList extends Component {
   componentDidMount() {
     const { payroll, account, web3 } = this.props;
     payroll.checkInfo.call({
-      from: account
+      from: account,
+      gas: 500000
     }).then((result) => {
       const employeeCount = result[2].toNumber();
 
@@ -68,16 +69,16 @@ class EmployeeList extends Component {
 
     const { payroll, account, web3 } = this.props;
     const requests = [];
-    for(let index = 0; index < employeeCount; index ){
-         requests.push(payroll.employees.call(index, {
-             from: account
-         }))
+
+    for(let index = 0; index < employeeCount; index++ ){
+         requests.push(payroll.checkEmployee.call(index, {from: account, gas: 500000}));
     }
+
     Promise.all(requests).then(values => {
          const employees = values.map(value => ({
             key: value[0],
             address: value[0],
-            salary: web3.fromWei(value[1].toNumber()),
+            salary: web3.fromWei(value[1].toNumber(),'ether'),
             lastPaidDay: new Date(value[2].toNumber() * 1000).toString()
          }));
  
@@ -94,6 +95,7 @@ class EmployeeList extends Component {
     const { address, salary, employees } = this.state;
     payroll.addEmployee(address, salary, {
          from: account,
+         gas: 500000
     }).then(() => {
            const newEmployee = {
              address,
@@ -114,8 +116,9 @@ class EmployeeList extends Component {
   updateEmployee = (address, salary) => {
     const { payroll, account } = this.props;
     const { employees } = this.state;
-    payroll.updateEmployee(salary, salary,{
+    payroll.updateEmployee(address, salary,{
          from: account,
+         gas: 500000
     }).then(() => {
          this.setState({
              employees: employees.map((employee) => {
@@ -135,7 +138,7 @@ class EmployeeList extends Component {
     const { employees } = this.state;
     payroll.removeEmployee(employeeId, {
          from: account,
-         gas: 310000
+         gas: 500000
     }).then(() => {
          this.setState({
              employees: employees.filter(employee => employee.address !== employee),
