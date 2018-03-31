@@ -113,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="138" column="19" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+              <caret line="138" column="29" lean-forward="true" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -375,12 +375,12 @@
       <workItem from="1522073905210" duration="21265000" />
       <workItem from="1522246646590" duration="512000" />
       <workItem from="1522248717722" duration="355000" />
-      <workItem from="1522488756895" duration="3517000" />
+      <workItem from="1522488756895" duration="3616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61175000" />
+    <option name="totallyTimeSpent" value="61274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -841,7 +841,7 @@
     <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="138" column="19" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <caret line="138" column="29" lean-forward="true" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
           <folding />
         </state>
       </provider>
