@@ -2,70 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="788cef18-2637-470d-8a27-cfe2ae5a0410" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/box-img-lg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/box-img-sm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/Oswald-300.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/Oswald-300.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/Oswald-300.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/Oswald-300.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/Oswald-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/Oswald-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/Oswald-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/Oswald-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/jest/cssTransform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/jest/fileTransform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/paths.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/polyfills.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/webpack.config.dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/config/webpack.config.prod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/contracts/Migrations.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/contracts/Ownable.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/contracts/SafeMath.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/migrations/1_initial_migration.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/migrations/2_deploy_contracts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/payroll.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/scripts/build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/scripts/start.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/scripts/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/App.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/App.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/App.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/EditableCell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Employee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/EmployeeList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Employer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Fund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/css/open-sans.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/css/oswald.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/css/pure-min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-300/Oswald-300.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/fonts/Oswald-regular/Oswald-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/utils/getWeb3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/test/TestSimpleStorage.sol" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/test/simplestorage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/truffle-config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-5/assignment/truffle.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Lesson-5/assignment/yours.sol" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/box-img-lg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/box-img-sm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/Oswald-300.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/Oswald-300.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/Oswald-300.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/Oswald-300.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/Oswald-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/Oswald-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/Oswald-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/Oswald-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/build/config.gypi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/build/contracts/Migrations.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/build/contracts/Ownable.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/build/contracts/Payroll.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/build/contracts/SafeMath.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/env.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/jest/cssTransform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/jest/fileTransform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/paths.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/polyfills.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/webpack.config.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/config/webpack.config.prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/contracts/Migrations.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/contracts/Ownable.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/contracts/SafeMath.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/migrations/1_initial_migration.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/migrations/2_deploy_contracts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/package-lock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/payroll.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/scripts/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/scripts/start.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/scripts/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/App.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/App.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/App.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/Common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/EditableCell.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/Employee.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/EmployeeList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/Employer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/components/Fund.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/css/open-sans.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/css/oswald.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/css/pure-min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Open-Sans-regular/Open-Sans-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-300/Oswald-300.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/fonts/Oswald-regular/Oswald-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/src/utils/getWeb3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/test/TestSimpleStorage.sol" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/test/simplestorage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/truffle-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson-6/assignment/truffle.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Lesson-6/assignment/yours.sol" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson-5/assignment/README.md" afterPath="$PROJECT_DIR$/Lesson-5/assignment/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js" afterPath="$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson-6/assignment/README.md" afterPath="$PROJECT_DIR$/Lesson-6/assignment/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,21 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Payroll.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="108" column="44" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="70" column="6" lean-forward="true" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -104,8 +100,8 @@
       <file leaf-file-name="Common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -113,56 +109,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditableCell.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Payroll.sol" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="138" column="29" lean-forward="true" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditableCell.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/EditableCell.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fund.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Fund.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="171">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Employer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Employee.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/EmployeeList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-154">
-              <caret line="134" column="18" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,11 +135,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_partialPaid</find>
-      <find>-</find>
-      <find>[index]</find>
       <find>getWeb3</find>
-      <find>NewFund</find>
       <find>增加员工</find>
       <find>employeeCount</find>
       <find>addEmployee</find>
@@ -200,6 +160,11 @@
       <find>account</find>
       <find>lastPaidDate</find>
       <find>employees</find>
+      <find>GetPaid</find>
+      <find>NewFund</find>
+      <find>UpdateEmployee</find>
+      <find>RemoveEmployee</find>
+      <find>NewEmployee</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/Lesson-5/assignment/src</dir>
@@ -225,14 +190,17 @@
         <option value="$PROJECT_DIR$/Lesson-4/assignment/README.md" />
         <option value="$PROJECT_DIR$/Lesson-4/assignment/payroll/test/payroll-addEmployee.js" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Fund.js" />
-        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/truffle.js" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.bak.sol" />
-        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Employer.js" />
-        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/App.js" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.sol" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/EmployeeList.js" />
         <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Employee.js" />
+        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/EditableCell.js" />
+        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/App.js" />
+        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Employer.js" />
+        <option value="$PROJECT_DIR$/Lesson-6/orgin/README.md" />
+        <option value="$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js" />
+        <option value="$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol" />
       </list>
     </option>
   </component>
@@ -252,6 +220,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Lesson-4/assignment/payroll/node_modules" />
     <handled-path value="$PROJECT_DIR$/Lesson-5/assignment/node_modules" />
+    <handled-path value="$PROJECT_DIR$/Lesson-6/assignment/node_modules" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
@@ -302,8 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,17 +281,6 @@
             <path>
               <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
               <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-4" type="462c0819:PsiDirectoryNode" />
-              <item name="orgin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
               <item name="Lesson-5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,35 +292,27 @@
             <path>
               <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
               <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson-6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson-6" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson-6" type="462c0819:PsiDirectoryNode" />
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-5" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-5" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Team-B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Team-B" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson-5" type="462c0819:PsiDirectoryNode" />
-              <item name="orgin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,12 +325,14 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Lesson-3/assignment" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Lesson-6" />
+      <recent name="$PROJECT_DIR$/Lesson-6/assignment" />
       <recent name="$PROJECT_DIR$/Lesson-5" />
       <recent name="$PROJECT_DIR$/Lesson-3/assignment/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Lesson-3/assignment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -422,25 +372,26 @@
       <workItem from="1521874009583" duration="1685000" />
       <workItem from="1521881657951" duration="343000" />
       <workItem from="1521980561340" duration="2762000" />
-      <workItem from="1522073905210" duration="20823000" />
+      <workItem from="1522073905210" duration="21265000" />
+      <workItem from="1522246646590" duration="512000" />
+      <workItem from="1522248717722" duration="355000" />
+      <workItem from="1522488756895" duration="3616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56349000" />
+    <option name="totallyTimeSpent" value="61274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26236045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.261563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36363637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4941349" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -448,6 +399,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -462,59 +414,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js</url>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lesson-1/assignment/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-1/orgin/payroll.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-1/assignment/notes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="3401">
-            <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-1/assignment/yours.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-1/assignment/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-1/orgin/payroll.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -645,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -661,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +599,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -705,27 +608,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="12" column="63" lean-forward="false" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-          <folding>
-            <marker date="1521993058000" expanded="true" signature="96:1633" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="288:344" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="743:927" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="757:808" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="938:1132" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="1185:1419" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="1199:1250" ph="{...}" />
-            <marker date="1521993058000" expanded="true" signature="1430:1618" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/yours.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/yours.sol" />
     <entry file="file://$PROJECT_DIR$/Lesson-5/orgin/src/components/Common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -750,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,16 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <marker date="1521906198000" expanded="true" signature="96:1715" ph="{...}" />
-            <marker date="1521906198000" expanded="true" signature="263:319" ph="{...}" />
-            <marker date="1521906198000" expanded="true" signature="732:1019" ph="{&quot;false&quot;: false...}" />
-            <marker date="1521906198000" expanded="true" signature="746:797" ph="{...}" />
-            <marker date="1521906198000" expanded="true" signature="1042:1236" ph="{...}" />
-            <marker date="1521906198000" expanded="true" signature="1290:1489" ph="{&quot;false&quot;: false...}" />
-            <marker date="1521906198000" expanded="true" signature="1304:1355" ph="{...}" />
-            <marker date="1521906198000" expanded="true" signature="1512:1700" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-298">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,87 +714,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.bak.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.bak.sol" />
+    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="209">
+            <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/contracts/Payroll.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="108" column="44" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="44" />
+        <state relative-caret-position="399">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="70" column="6" lean-forward="true" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/README.md">
+    <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="209">
-            <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Employee.js">
+    <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/yours.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/migrations/2_deploy_contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-6/orgin/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="38">
+            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/EmployeeList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="134" column="18" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="18" />
+        <state relative-caret-position="194">
+          <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Employee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Employer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Fund.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="19">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -932,8 +820,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/EditableCell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-5/assignment/src/components/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson-6/assignment/contracts/Payroll.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="138" column="29" lean-forward="true" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
           <folding />
         </state>
       </provider>

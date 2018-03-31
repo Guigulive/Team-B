@@ -36,6 +36,7 @@ class Employer extends Component {
     const { account, payroll, web3 } = this.props;
     const { mode, owner } = this.state;
 
+    console.log('renderContent',owner !== account,owner,account)
     if (owner !== account) {
       return <Alert message="你没有权限" type="error" showIcon />;
     }
