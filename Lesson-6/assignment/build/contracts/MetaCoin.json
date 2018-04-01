@@ -368,7 +368,7 @@
       "address": "0xc5f7aadc5ad591717bb309c6f855fee936e29728",
       "updated_at": 1522495190383
     },
-    "1522503464955": {
+    "1522543628954": {
       "events": {
         "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
           "anonymous": false,
@@ -394,43 +394,12 @@
         }
       },
       "links": {
-        "ConvertLib": "0x69a6e0fd68e82028df0b736c9fd864e8c7abb7c9"
+        "ConvertLib": "0xb8f575b4b772d4886c20ad95c3f462eb58772119"
       },
-      "address": "0x6bf1025575d90e79db65f53557a6012a244fe2c6",
-      "updated_at": 1522505762522
-    },
-    "1522505886578": {
-      "events": {
-        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "_from",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "_to",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "_value",
-              "type": "uint256"
-            }
-          ],
-          "name": "Transfer",
-          "type": "event"
-        }
-      },
-      "links": {
-        "ConvertLib": "0x3eb3ece2fb71bb1023ee0fd4435b84f7d6de6194"
-      },
-      "address": "0xb93d099e2efb00591b85b00e5151e210a8c90bd1",
-      "updated_at": 1522506202346
+      "address": "0xd874b5873756060f8889e462b17e7bf4b6b32d07",
+      "updated_at": 1522543648126
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1522506202346
+  "updated_at": 1522543648126
 }

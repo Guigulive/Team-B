@@ -80,19 +80,13 @@
       "address": "0x611cf61daec5a02765ac7d5aa282b513bd09c745",
       "updated_at": 1522495190382
     },
-    "1522503464955": {
+    "1522543628954": {
       "events": {},
       "links": {},
-      "address": "0x69a6e0fd68e82028df0b736c9fd864e8c7abb7c9",
-      "updated_at": 1522505762521
-    },
-    "1522505886578": {
-      "events": {},
-      "links": {},
-      "address": "0x3eb3ece2fb71bb1023ee0fd4435b84f7d6de6194",
-      "updated_at": 1522506202345
+      "address": "0xb8f575b4b772d4886c20ad95c3f462eb58772119",
+      "updated_at": 1522543648125
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1522506202345
+  "updated_at": 1522543648125
 }

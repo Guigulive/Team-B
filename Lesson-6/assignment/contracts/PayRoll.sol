@@ -23,7 +23,22 @@ contract PayRoll is Ownable {
     uint totalSalary=0;//总的薪水
     uint totalEmployee=0;
     
-    
+    event NewEmployee(
+        address employee
+    );
+    event UpdateEmployee(
+        address employee
+    );
+    event RemoveEmployee(
+        address employee
+    );
+    event NewFund(
+        uint balance
+    );
+    event GetPaid(
+        address employee
+    );
+  
      
      //存储employee信息改为map后，下面的函数不需要了。
      //返回参数默认存在 memory中
@@ -36,9 +51,6 @@ contract PayRoll is Ownable {
          }
      }
 
-
-
-     
      function _partialPay(Employee employee) private {
             //除法会把小数抹掉，所以要先乘以salary后再除
              uint pay=employee.salary *(now-employee.lastPayDay)/payDuration; 
@@ -64,12 +76,9 @@ contract PayRoll is Ownable {
      }
      
     
-     
-     
-     
-    
     // 充值 ， 需要 向  它  转钱
     function addFund() payable returns (uint){ //  payable    表示可以 接收  钱 
+        NewFund(this.balance);
         return this.balance;
     }
     
@@ -89,6 +98,8 @@ contract PayRoll is Ownable {
         totalEmployee=totalEmployee.add(1);
 
         employeeAddressList.push(employeeId);
+
+        NewEmployee(employeeId);
     }
     
     
@@ -128,10 +139,6 @@ contract PayRoll is Ownable {
         
     }
     
-    
-    
-    
-    // 移除员工 
     function removeEmployee(address employeeId) onlyOwner employeeExist(employeeId){
     
         var employee=employees[employeeId];
@@ -152,6 +159,8 @@ contract PayRoll is Ownable {
         //填充刚才删除的空，把最后一个元素移动到刚才的位置
         employeeAddressList[index]=employeeAddressList[employeeAddressList.length-1];
         employeeAddressList.length-=1;// length -- 缩容
+        
+        RemoveEmployee(employeeId);
 
     }
     
@@ -167,7 +176,8 @@ contract PayRoll is Ownable {
        employee.salary=money_ether;
        employee.lastPayDay=now;
         
-        totalSalary=totalSalary.sub(prev_salary).add(money_ether);  //更新薪水，把原来的减去，新的薪水加上
+       totalSalary=totalSalary.sub(prev_salary).add(money_ether);  //更新薪水，把原来的减去，新的薪水加上
+       UpdateEmployee(employeeId);
     }
     
     
@@ -199,6 +209,7 @@ contract PayRoll is Ownable {
         // 把 转钱的操作放到最后在，内部变量修改完后再给外部钱 
         employee.id.transfer(employee.salary);
         return employee.salary;
+        GetPaid(employee.id);
     }
 
     
