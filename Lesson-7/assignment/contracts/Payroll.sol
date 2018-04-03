@@ -59,7 +59,6 @@ contract Payroll is Ownable {
     function removeEmployee(address employeeId) onlyOwner employeeExit(employeeId) {
         var employee = employees[employeeId];
 
-        _partialPaid(employee);
         totalSalary = totalSalary.sub(employee.salary);
         delete employees[employeeId];
         for(var i = 0; i < employeeList.length; i++) {
@@ -71,17 +70,18 @@ contract Payroll is Ownable {
           }
         }
         totalEmployee = totalEmployee.sub(1);
+        _partialPaid(employee);
         RemoveEmployee();
     }
     
     function updateEmployee(address employeeId, uint salary) onlyOwner employeeExit(employeeId) {
         var employee = employees[employeeId];
 
-        _partialPaid(employee);
         totalSalary = totalSalary.sub(employee.salary);
         employee.salary = salary.mul(1 ether);
         employee.lastPayday = now;
         totalSalary = totalSalary.add(employee.salary);
+        _partialPaid(employee);
         UpdateEmployee();
     }
     

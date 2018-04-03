@@ -11,7 +11,6 @@ class Common extends Component {
   componentDidMount() {
     const { payroll, web3 } = this.props;
     const updateInfo = (error, result) => {
-      console.log('udpate info')
       if (!error) {
         this.checkInfo();
       }
@@ -35,7 +34,6 @@ class Common extends Component {
   }
 
   checkInfo = () => {
-    console.log('checkinfo');
     const { payroll, account, web3 } = this.props;
     payroll.checkInfo.call({
       from: account,
